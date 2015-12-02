@@ -1,19 +1,27 @@
 package com.example.guest.dailyforecastactivity;
 
 import android.app.ListActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class DailyForecastActivity extends ListActivity {
+
+    @Bind(R.id.welcomeText)
+    TextView welcomeText;
+
+    @Bind(R.id.goButton)
+    TextView goButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_forecast);
 
-        String[] daysOfTheWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1, daysOfTheWeek);
-        setListAdapter(adapter);
+        ButterKnife.bind(this);
+
     }
 }
+

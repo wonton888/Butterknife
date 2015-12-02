@@ -20,10 +20,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/no_daily_data"
-        android:id="@android:id/empty"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF" />
+        android:text="goButton"
+        android:id="@+id/goButton"
+        android:layout_marginTop="37dp"
+        android:layout_alignTop="@android:id/list"
+        android:layout_alignRight="@android:id/list" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="welcomeText"
+        android:id="@+id/welcomeText"
+        android:layout_below="@+id/goButton"
+        android:layout_toLeftOf="@+id/goButton"
+        android:layout_toStartOf="@+id/goButton"
+        android:layout_marginTop="59dp" />
 
 </RelativeLayout>
